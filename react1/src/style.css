@@ -1,0 +1,27 @@
+/* #image{
+    box-shadow: 0 0 10px red;
+}
+
+.text{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#name{
+    background-color: rgb(55, 55, 246);
+    color: rgb(255, 0, 0);
+    border-radius: 10px;
+} */
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.text{
+    color: black;
+}
+
+
