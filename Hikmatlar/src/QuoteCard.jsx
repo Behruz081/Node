@@ -8,8 +8,8 @@ function QuoteCard({muallif, matn}){
             borderRadius:"8px",
             boxShadow:"0 4px 8px rgba(0,0,0.1)"
         }}>
-            <p style={{fontSize:"20px", fontStyle:"italic"}}>"{matn}"</p>
-            <h4 style={{textAlign:"right", color:"#333"}}>-- {muallif}</h4>
+            <p id="text" style={{fontSize:"20px", fontStyle:"italic"}}>"{matn}"</p>
+            <h4 id="text" style={{textAlign:"right", color:"#333"}}>-- {muallif}</h4>
         </div>
     )
 }

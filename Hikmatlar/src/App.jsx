@@ -41,6 +41,19 @@ function App() {
 
       document.body.style.transition='0.5s'
 
+      
+      const colors=['#2C3E50', '#34495E', '#7F8C8D', '#16A085', '#27AE60']
+      const randomcolor=colors[Math.floor(Math.random()*ranglar.length)]
+      document.getElementById("container").style.backgroundColor=randomcolor
+
+      document.getElementById("container").style.transition='0.5s'
+
+
+      const Rcolors = ['#E67E22', '#ECF0F1', '#F1C40F', '#C0392B', '#8E44AD']
+      const Rrandomcolor=Rcolors[Math.floor(Math.random()*ranglar.length)]
+      
+      document.getElementById("text").style.transition='0.5s'
+      document.getElementById("text").style.color=Rrandomcolor
 
     }
   },[quote]);
