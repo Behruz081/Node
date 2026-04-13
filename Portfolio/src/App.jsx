@@ -12,7 +12,7 @@ const Home = () => {
     <div className='home'>
         <div className="all">
             <div>
-                <img className='human' src={human} style={{width:"160px", height:"160px", borderRadius:"50%"}} />
+                <img className='human' src={human} style={{width:"220px", height:"220px", borderRadius:"50%"}} />
             </div>
             <div>
                 <h1 style={{wordSpacing:"10px", display:"flex", marginLeft:"60px"}}>Hi, I'm 
