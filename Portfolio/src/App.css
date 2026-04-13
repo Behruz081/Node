@@ -1,0 +1,48 @@
+/* .about{}
+.contact{} */
+.home{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.all{
+  display: flex;
+  align-items: center;
+}
+.all h1{ color: black; }   .all h2{ color: black; }  .all{ color: black; }
+.human{
+  margin-top: 10px;
+  box-shadow: 5px 5px 5px black;
+}
+img{
+  width: 50px;
+  height: 50px;
+} .tg{width: 60px;}
+a{
+  text-decoration: none
+}
+
+
+
+
+
+
+
+
+
+nav{
+  display: flex;
+  justify-content: space-between;
+}
+.navtext{
+  font-size: 35px;
+  color: grey;
+}
+#home{
+  text-decoration-line: underline;
+  text-decoration-color: rgb(121, 192, 168);
+}
+#contact{
+  margin-right: 20px;
+}
