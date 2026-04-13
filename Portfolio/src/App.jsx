@@ -54,9 +54,9 @@ function App() {
   return (
     <BrowserRouter>
       <nav style={{padding:"20px", background:"#eee"}}>
-        <Link className='navtext' id='home' to='/' style={{marginRight:"10px"}}>Bosh sahifa</Link>
-        <Link className='navtext' id="about" to='/about' style={{marginRight:"10px", textDecorationLine:"none"}}>Biz haqimizda</Link>
-        <Link className='navtext' id="contact" to='/contact' style={{textDecorationLine:"none"}}>Aloqa</Link>
+        <Link className='navtext' id='home' to='/' style={{marginRight:"10px"}}>Home</Link>
+        <Link className='navtext' id="about" to='/about' style={{marginRight:"10px", textDecorationLine:"none"}}>About me</Link>
+        <Link className='navtext' id="contact" to='/contact' style={{textDecorationLine:"none"}}>Contact</Link>
       </nav>
 
       <div style={{padding:"20px"}}>
