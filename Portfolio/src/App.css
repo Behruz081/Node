@@ -1,5 +1,3 @@
-/* .about{}
-.contact{} */
 .home{
   background-color: white;
   display: flex;
@@ -26,6 +24,42 @@ a{
 
 
 
+.about {
+  background-color: rgb(15, 23, 42);
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  padding-top: 30px;
+}
+
+.abouth1 {
+  background-color: rgb(56, 189, 248);
+  color: rgb(15, 23, 42);
+  padding: 20px 40px;
+  border-radius: 30px;
+  font-size: 36px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  width: 400px;
+  margin: auto;
+  margin-bottom: 30px;
+}
+
+.aboutp {
+  background-color: rgb(30, 41, 59);
+  padding: 25px 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+.p1, .p2 {
+  color: rgb(241, 245, 249);
+  font-size: 18px;
+  margin: 10px 0;
+  color: rgb(56, 189, 248);
+}
 
 
 
@@ -34,14 +68,19 @@ a{
 nav{
   display: flex;
   justify-content: space-between;
+  border-radius: 10px;
 }
 .navtext{
   font-size: 35px;
-  color: grey;
+  color: black;
+  
 }
-#home{
+#navhome{
   text-decoration-line: underline;
-  text-decoration-color: rgb(121, 192, 168);
+  text-decoration-color: rgb(230, 48, 48);
+}
+#navabout{
+
 }
 #contact{
   margin-right: 20px;
