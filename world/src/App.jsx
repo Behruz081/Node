@@ -11,7 +11,7 @@ function App() {
     setLoading(true)
     setError(null)
     try {
-      const res = await fetch('https://restcountries.com/v3.1/all?fields=name,flags')
+      const res = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,capital')
       const data = await res.json()
 
       const randomIndex = Math.floor(Math.random() * data.length)
@@ -19,7 +19,9 @@ function App() {
 
       setCountry({
         flag: randomCountry.flags.png,
-        name: randomCountry.name.common
+        name: randomCountry.name.common,
+        capital: randomCountry.capital,
+        population: randomCountry.population.toLocaleString()
       })
     } catch (err) {
       setError("Ma'lumot yuklashda xatolik!")
@@ -51,7 +53,7 @@ function App() {
 
       {!loading && country && (
         <div id="container" style={{ padding: "20px", borderRadius: "10px" }}>
-          <GetCountry image={country.flag} name={country.name} />
+          <GetCountry image={country.flag} name={country.name} population={country.population} capital={country.capital} />
         </div>
       )}
 
