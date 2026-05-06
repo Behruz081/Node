@@ -73,6 +73,7 @@ const Contact = () => {
           <a href="https://t.me/B3hruzbek"> <img className='tg icon' src={black_telegram}/> </a> 
           <a href="https://github.com/Behruz081"> <img className='github icon' src={black_github}/> </a>
       </h1>
+      <h2>Tel raqam: <p> +998 99 432 27 60</p></h2>
 
     </div>
   )
