@@ -1,9 +1,12 @@
 import './App.css'
 import QuoteCard from './QuoteCard';
+import CurrencyConvertor from './convertor';
+
 
 import React, { useState, useEffect } from 'react';
 
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
+
 
 import human from './assets/rasm.jpg'
 import instagram from './assets/instagram.png'
@@ -158,6 +161,7 @@ function App() {
         <Link className='navtext' id="navabout" to='/about' style={{marginRight:"10px", textDecorationLine:"none"}}>About me</Link>
         <Link className='navtext' id="navcontact" to='/contact' style={{textDecorationLine:"none"}}>Contact</Link>
         <Link className='navtext' id="navquote" to='/quote' style={{textDecorationLine:"none"}}>Quote</Link>
+        <Link className='navtext' id="navconvertor" to='/convertor' style={{textDecorationLine:"none"}}>Convertor</Link>
       </nav>
 
       <div style={{padding:"20px"}}>
@@ -166,6 +170,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quote" element={<Quote />} />
+          <Route path="/convertor" element={<CurrencyConvertor />} />
         </Routes>
       </div>
     </BrowserRouter>
