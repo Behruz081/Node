@@ -150,9 +150,6 @@ const Quote = () =>{
   )
 }
 
-// const Quote = () => { return( <div>asda</div> ) }
-
-
 function App() {
 
 

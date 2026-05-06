@@ -45,9 +45,6 @@ function Davlat() {
     }
   }, [country])
 
-
-      
-  
   return (
     <div style={{ maxWidth: "600px", margin: "50px auto", textAlign: "center" }}>
       
@@ -66,7 +63,6 @@ function Davlat() {
       >
         Yangi davlat
       </button>
-
       
     </div>
   )
