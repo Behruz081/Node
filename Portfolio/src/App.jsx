@@ -2,6 +2,7 @@ import './App.css'
 import QuoteCard from './QuoteCard';
 import CurrencyConvertor from './convertor';
 import DavlatlarKetmaKet from './Davlatlar';
+import MovieSearch from './MovieSearch';
 
 
 import React, { useState, useEffect } from 'react';
@@ -151,8 +152,6 @@ const Quote = () =>{
 }
 
 function App() {
-
-
   return (
     <BrowserRouter>
       <nav style={{padding:"20px", background:"rgb(56, 189, 248)", boxShadow:"0px 0px 30px blue"}}>
@@ -162,6 +161,7 @@ function App() {
         <Link className='navtext' id="navquote" to='/quote' style={{textDecorationLine:"none"}}>Quote</Link>
         <Link className='navtext' id="navconvertor" to='/convertor' style={{textDecorationLine:"none"}}>Convertor</Link>
         <Link className='navtext' id="navdavlatlar" to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link>
+        <Link className='navtext' id="navmovie" to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link>
       </nav>
 
       <div style={{padding:"20px"}}>
@@ -172,6 +172,7 @@ function App() {
           <Route path="/quote" element={<Quote />} />
           <Route path="/convertor" element={<CurrencyConvertor />} />
           <Route path="/davlatlar" element={<DavlatlarKetmaKet />} />
+          <Route path="/movie" element={<MovieSearch />} />
         </Routes>
       </div>
     </BrowserRouter>
