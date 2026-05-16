@@ -4,11 +4,8 @@ import CurrencyConvertor from './convertor';
 import DavlatlarKetmaKet from './Davlatlar';
 import MovieSearch from './MovieSearch';
 
-
 import React, { useState, useEffect } from 'react';
-
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-
 
 import human from './assets/rasm.jpg'
 import instagram from './assets/instagram.png'
@@ -47,7 +44,6 @@ const Home = () => {
     </div>
   )
 }
-
 const About = () => {
   return(
     <div className='about'>
@@ -79,7 +75,6 @@ const Contact = () => {
     </div>
   )
 }
-
 const Quote = () =>{
   const [quote, setQuote] = useState(null)
   const [loading, setLoading] = useState(null)
