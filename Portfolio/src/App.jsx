@@ -5,11 +5,8 @@ import DavlatlarKetmaKet from './Davlatlar';
 import MovieSearch from './MovieSearch';
 import Translater from './Translater';
 
-
 import React, { useState, useEffect } from 'react';
-
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-
 
 import human from './assets/rasm.jpg'
 import instagram from './assets/instagram.png'
