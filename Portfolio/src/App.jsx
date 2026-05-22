@@ -3,6 +3,7 @@ import QuoteCard from './QuoteCard';
 import CurrencyConvertor from './convertor';
 import DavlatlarKetmaKet from './Davlatlar';
 import MovieSearch from './MovieSearch';
+import Translater from './Translater';
 
 
 import React, { useState, useEffect } from 'react';
@@ -47,7 +48,6 @@ const Home = () => {
     </div>
   )
 }
-
 const About = () => {
   return(
     <div className='about'>
@@ -79,7 +79,6 @@ const Contact = () => {
     </div>
   )
 }
-
 const Quote = () =>{
   const [quote, setQuote] = useState(null)
   const [loading, setLoading] = useState(null)
@@ -162,6 +161,7 @@ function App() {
         <Link className='navtext' id="navconvertor" to='/convertor' style={{textDecorationLine:"none"}}>Convertor</Link>
         <Link className='navtext' id="navdavlatlar" to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link>
         <Link className='navtext' id="navmovie" to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link>
+        <Link className='navtext' id="navtranslater" to='/translater' style={{textDecorationLine:"none"}}>Tarjimon</Link>
       </nav>
 
       <div style={{padding:"20px"}}>
@@ -173,6 +173,7 @@ function App() {
           <Route path="/convertor" element={<CurrencyConvertor />} />
           <Route path="/davlatlar" element={<DavlatlarKetmaKet />} />
           <Route path="/movie" element={<MovieSearch />} />
+          <Route path="/translater" element={<Translater />} />
         </Routes>
       </div>
     </BrowserRouter>
