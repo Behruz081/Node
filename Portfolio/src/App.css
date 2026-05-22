@@ -73,7 +73,7 @@ nav{
 .navtext{
   font-size: 35px;
   color: black;
-  
+  margin: 10px;
 }
 #navhome{
   text-decoration-line: underline;
