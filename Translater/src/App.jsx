@@ -5,12 +5,16 @@ import axios from 'axios'
 function App() {
   const [text, setText] = useState('')
   const [translatedText, setTranslatedText] = useState('')
+
   const [matches, setMatches] = useState('')
   const [matches1, setMatches1] = useState('')
   const [matches2, setMatches2] = useState('')
+
   const [sourceLang, setSourceLang] = useState('en')
   const [targetLang, setTargetLang] = useState('uz')
   const [loading, setLoading] = useState(false)
+
+  const [status, setStatus] = useState('')
 
   const handleTranslate = async () => {
     if(!text) return
@@ -27,19 +31,32 @@ function App() {
       // https://api.mymemory.translated.net/get?q=Hello&langpair=en|ru
       if(response.data && response.data.responseData) {
         setTranslatedText(response.data.responseData.translatedText) 
+
+        setMatches(response.data.matches[0].translation)
+        setMatches1(response.data.matches[1].translation)
+        setMatches2(response.data.matches[2].translation)
+
+        setStatus(response.data.responseStatus) 
+
       } else {
         alert("Tarjima topilmadi!")
       } 
 
 
-          if(response.data && response.data.matches){
-            setMatches(response.data.matches[0].translation)
-            setMatches1(response.data.matches[1].translation)
-            setMatches2(response.data.matches[2].translation)
-          } else {
-            alert("Sinonimlari yoq")
-          } 
+      // if(response.data && response.data.matches){
+      //   setMatches(response.data.matches[0].translation)
+      //   setMatches1(response.data.matches[1].translation)
+      //   setMatches2(response.data.matches[2].translation)
+      // } else {
+      //   alert("Sinonimlari yoq")
+      // } 
 
+
+      // if(response.data && response.data.responseStatus) {
+      //   setStatus(response.data.responseStatus) 
+      // } else {
+      //   alert("Status yoq")
+      // } 
 
     } catch (error) {
         console.error("Xatolik tafsiloti", error)
@@ -129,9 +146,12 @@ const handleSwap = () => {
         }}>
           <h4 style={{ margin: '0 0 10px 0', color: '#34495e' }}>Tarjimasi:</h4>
           <p style={{ fontSize: '18px', margin: 0, whiteSpace: 'pre-wrap', lineHeight: '1.5', marginBottom:"10px" }}>{translatedText}</p>
-          <h4 style={{ margin: '0 0 10px 0', color: '#34495e' }}>Sinonimlari:</h4>
 
+          <h4 style={{ margin: '0 0 10px 0', color: '#34495e' }}>Sinonimlari:</h4>
           <p>{matches} , {matches1} , {matches2}</p> 
+
+          <h4 style={{ margin: '0 0 10px 0', color: '#34495e' }}>Status kodi:</h4>
+          <p>{status}</p>
 
         </div>
       )}

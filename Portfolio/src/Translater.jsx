@@ -26,18 +26,32 @@ function Translater() {
       // https://api.mymemory.translated.net/get?q=Hello&langpair=en|ru
       if(response.data && response.data.responseData) {
         setTranslatedText(response.data.responseData.translatedText) 
+
+        setMatches(response.data.matches[0].translation)
+        setMatches1(response.data.matches[1].translation)
+        setMatches2(response.data.matches[2].translation)
+
+        setStatus(response.data.responseStatus) 
+
       } else {
         alert("Tarjima topilmadi!")
       } 
 
 
-          if(response.data && response.data.matches){
-            setMatches(response.data.matches[0].translation)
-            setMatches1(response.data.matches[1].translation)
-            setMatches2(response.data.matches[2].translation)
-          } else {
-            alert("Sinonimlari yoq")
-          } 
+      // if(response.data && response.data.matches){
+      //   setMatches(response.data.matches[0].translation)
+      //   setMatches1(response.data.matches[1].translation)
+      //   setMatches2(response.data.matches[2].translation)
+      // } else {
+      //   alert("Sinonimlari yoq")
+      // } 
+
+
+      // if(response.data && response.data.responseStatus) {
+      //   setStatus(response.data.responseStatus) 
+      // } else {
+      //   alert("Status yoq")
+      // }  
 
 
     } catch (error) {
