@@ -61,15 +61,15 @@ function App() {
       </button>
 
       <div>
-        {result.map((name, index) => (
+        {result.map((item, index) => (
             <div>
-                <p key={index}>{name.title}</p>
-                <p key={index}>{name.author_name}</p>
+                <p key={index}>{item.title}</p>
+                <p key={index}>{item.author_name}</p>
             </div>
         ))}
 
-        {/* {result.map((name, index) => (
-          <p key={index}>{name.author_name}</p>
+        {/* {result.map((item, index) => (
+          <p key={index}>{item.author_name}</p>
         ))} */}
 
       </div>
