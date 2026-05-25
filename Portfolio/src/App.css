@@ -86,3 +86,17 @@ nav{
   margin-right: 20px;
 }
 
+
+.projecttext{
+  color: white;
+  display:"grid";
+  grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+  margin: 10px;
+  font-size: 40px;
+}
+
+.projectsbtn{
+  margin: 10px;
+  border-radius: 10px;
+}
+

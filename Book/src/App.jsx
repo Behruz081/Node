@@ -35,44 +35,56 @@ function App() {
 
 
   return(
-    <div style={{width:"500px", margin:"auto" }}>
-      <div style={{ marginBottom: '20px', margin:"0 auto 20px auto" }}>
-        <h1>Kitoblarni izlang!</h1>
-        <textarea
-          rows="5"
-          value={book}
-          onChange={(e) => setBook(e.target.value)}
-          placeholder="Nomini kiriting..."
-          style={{ width: '96%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc', fontSize: '16px',
-             resize: 'none' }}
-        />
+    <div style={{width:"700px", margin:"auto" }}>
+      <div style={{display:"flex"}}>
+        
+        <div style={{ marginBottom: '20px', margin:"0 20px 20px auto", display:"inline" }}>
+          <h1 style={{marginLeft:"90px"}}>Kitoblarni izlang!</h1>
+          <textarea
+            rows="5"
+            value={book}
+            onChange={(e) => setBook(e.target.value)}
+            placeholder="Nomini kiriting..."
+            style={{ width: '96%', height:"60px" , padding: '12px', paddingBottom:"0" , borderRadius: '8px', border: '1px solid #ccc',
+               fontSize: '16px', resize: 'none', fontSize:"40px", justifyContent:"center", alignItems:"center" }}
+          />
+        </div>
+            
+        <button 
+          onClick={searchbooks}
+          disabled={loading || !book}
+          style={{
+            height: '75px', marginTop:"90px" , padding: '12px', background: '#9b59b6', color: 'white',
+            border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '16px',
+            fontWeight: 'bold', transition: '0.2s', opacity: (!book || loading) ? 0.6 : 1,
+            display:"inline"
+          }}
+        >
+          {loading ? "Qidirilmoqda..." : "Izlash"}
+        </button>
+
       </div>
 
-      <button 
-        onClick={searchbooks}
-        disabled={loading || !book}
-        style={{
-          width: '100%', padding: '12px', background: '#9b59b6', color: 'white',
-          border: 'none', borderRadius: '8px', cursor: 'pointer', fontSize: '16px',
-          fontWeight: 'bold', transition: '0.2s', opacity: (!book || loading) ? 0.6 : 1
-        }}
-      >
-        {loading ? "Qidirilmoqda..." : "Izlash"}
-      </button>
+
 
       <div>
         {result.map((item, index) => (
-            <div>
-                <p key={index}>{item.title}</p>
-                <p key={index}>{item.author_name}</p>
+            <div style={{display:"flex"}}>
+
+              <img style={{marginBottom:"20px"}} src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`}  />
+
+                <p key={index}> 
+                    <p style={{color:"yellow", marginLeft:"10px"}}>Kitob nomi: {item.title} </p>   
+                    <p style={{color:"white"}}>Yozuvchisi: {item.author_name}</p>
+                    <p style={{color:"white"}}>Birinchi marotaba nashr qilingan yili: {item.first_publish_year} </p>
+                </p>
+                
+                {/* <img src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`} */}
+
             </div>
         ))}
-
-        {/* {result.map((item, index) => (
-          <p key={index}>{item.author_name}</p>
-        ))} */}
-
       </div>
+
     </div>
   )} 
 

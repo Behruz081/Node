@@ -44,10 +44,10 @@ function MovieSearch() {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder='Kino nomini yozing...'
-          style={{padding:"10px", width:"300px", borderRadius:"5px", border:"1px solid #ccc"}}
+          style={{padding:"10px", width:"300px", borderRadius:"5px", border:"1px solid #ccc", marginLeft:"auto"}}
         />
         <button type='submit' style={{padding:"10px 20px", background:"#27ae60", color:"white", border:"none", 
-            borderRadius:"5px", cursor:"pointer"
+            borderRadius:"5px", cursor:"pointer", marginRight:"auto"
         }} >Qidirish</button>
       </form>
 

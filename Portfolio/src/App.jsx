@@ -77,7 +77,7 @@ const Contact = () => {
     </div>
   )
 }
-const Quote = () =>{
+const Quote = () => {
   const [quote, setQuote] = useState(null)
   const [loading, setLoading] = useState(null)
   const [error, setError] = useState(null)
@@ -147,6 +147,19 @@ const Quote = () =>{
     </div>
   )
 }
+const Projects = () => {
+  return(
+    <div>
+      {/* <button> <a href='./convertor'>aa</a> </button> */}
+      <button className='projectsbtn'> <Link className='projecttext' to='/convertor' style={{textDecorationLine:"none", color:"white"}}>Convertor</Link> </button>
+      <button className='projectsbtn'> <Link className='projecttext' to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link> </button>
+      <button className='projectsbtn'> <Link className='projecttext' to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link> </button>
+      <button className='projectsbtn'> <Link className='projecttext' to='/translater' style={{textDecorationLine:"none"}}>Tarjimon</Link> </button>
+      <button className='projectsbtn'> <Link className='projecttext' to='/book' style={{textDecorationLine:"none"}}>Kitoblarni izlash</Link> </button>
+
+    </div>
+  )
+}
 
 function App() {
   return (
@@ -155,12 +168,9 @@ function App() {
         <Link className='navtext' id='navhome' to='/' style={{marginRight:"10px"}}>Home</Link>
         <Link className='navtext' id="navabout" to='/about' style={{marginRight:"10px", textDecorationLine:"none"}}>About me</Link>
         <Link className='navtext' id="navcontact" to='/contact' style={{textDecorationLine:"none"}}>Contact</Link>
-        <Link className='navtext' id="navquote" to='/quote' style={{textDecorationLine:"none"}}>Quote</Link>
-        {/* <Link className='navtext' id="navconvertor" to='/convertor' style={{textDecorationLine:"none"}}>Convertor</Link> */}
-        {/* <Link className='navtext' id="navdavlatlar" to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link> */}
-        {/* <Link className='navtext' id="navmovie" to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link> */}
-        {/* <Link className='navtext' id="navtranslater" to='/translater' style={{textDecorationLine:"none"}}>Tarjimon</Link> */}
-        <Link className='navtext' id="navbook" to='/book' style={{textDecorationLine:"none"}}>Kutubxona</Link>
+        <Link className='navtext' id="navquote" to='/quote' style={{textDecorationLine:"none"}}>Kun hikmati</Link>
+
+        <Link className='navtext' id="navprojects" to='/projects' style={{textDecorationLine:"none"}}>Projects</Link>
 
       </nav>
 
@@ -170,10 +180,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quote" element={<Quote />} />
-          {/* <Route path="/convertor" element={<CurrencyConvertor />} /> */}
-          {/* <Route path="/davlatlar" element={<DavlatlarKetmaKet />} /> */}
-          {/* <Route path="/movie" element={<MovieSearch />} /> */}
-          {/* <Route path="/translater" element={<Translater />} /> */}
+          <Route path="/projects" element={<Projects />} />
+
+          <Route path="/convertor" element={<CurrencyConvertor />} />
+          <Route path="/davlatlar" element={<DavlatlarKetmaKet />} />
+          <Route path="/movie" element={<MovieSearch />} />
+          <Route path="/translater" element={<Translater />} />
           <Route path="/book" element={<Book />} />
 
         </Routes>
