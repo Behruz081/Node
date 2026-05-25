@@ -4,6 +4,7 @@ import CurrencyConvertor from './convertor';
 import DavlatlarKetmaKet from './Davlatlar';
 import MovieSearch from './MovieSearch';
 import Translater from './Translater';
+import Book from './Book';
 
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
@@ -155,10 +156,12 @@ function App() {
         <Link className='navtext' id="navabout" to='/about' style={{marginRight:"10px", textDecorationLine:"none"}}>About me</Link>
         <Link className='navtext' id="navcontact" to='/contact' style={{textDecorationLine:"none"}}>Contact</Link>
         <Link className='navtext' id="navquote" to='/quote' style={{textDecorationLine:"none"}}>Quote</Link>
-        <Link className='navtext' id="navconvertor" to='/convertor' style={{textDecorationLine:"none"}}>Convertor</Link>
-        <Link className='navtext' id="navdavlatlar" to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link>
-        <Link className='navtext' id="navmovie" to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link>
-        <Link className='navtext' id="navtranslater" to='/translater' style={{textDecorationLine:"none"}}>Tarjimon</Link>
+        {/* <Link className='navtext' id="navconvertor" to='/convertor' style={{textDecorationLine:"none"}}>Convertor</Link> */}
+        {/* <Link className='navtext' id="navdavlatlar" to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link> */}
+        {/* <Link className='navtext' id="navmovie" to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link> */}
+        {/* <Link className='navtext' id="navtranslater" to='/translater' style={{textDecorationLine:"none"}}>Tarjimon</Link> */}
+        <Link className='navtext' id="navbook" to='/book' style={{textDecorationLine:"none"}}>Kutubxona</Link>
+
       </nav>
 
       <div style={{padding:"20px"}}>
@@ -167,10 +170,12 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/quote" element={<Quote />} />
-          <Route path="/convertor" element={<CurrencyConvertor />} />
-          <Route path="/davlatlar" element={<DavlatlarKetmaKet />} />
-          <Route path="/movie" element={<MovieSearch />} />
-          <Route path="/translater" element={<Translater />} />
+          {/* <Route path="/convertor" element={<CurrencyConvertor />} /> */}
+          {/* <Route path="/davlatlar" element={<DavlatlarKetmaKet />} /> */}
+          {/* <Route path="/movie" element={<MovieSearch />} /> */}
+          {/* <Route path="/translater" element={<Translater />} /> */}
+          <Route path="/book" element={<Book />} />
+
         </Routes>
       </div>
     </BrowserRouter>
