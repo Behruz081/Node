@@ -3,7 +3,7 @@ import './App.css'
 import axios from 'axios'
 
 
-function Book() {
+function Library() {
  
   const [loading, setLoading] = useState(false)
   const [book, setBook] = useState([])
@@ -39,7 +39,7 @@ function Book() {
       <div style={{display:"flex"}}>
         
         <div style={{ marginBottom: '20px', margin:"0 20px 20px auto", display:"inline" }}>
-          <h1 style={{marginLeft:"90px"}}>Kitob nomini kiriting!</h1>
+          <h1 style={{marginLeft:"90px"}}>Kitoblarni izlang!</h1>
           <textarea
             rows="5"
             value={book}
@@ -75,8 +75,8 @@ function Book() {
 
                 <p key={index}> 
                     <p style={{color:"yellow", marginLeft:"10px"}}>Kitob nomi: {item.title} </p>   
-                    <p style={{color:"white", marginLeft:"10px"}}>Yozuvchisi: {item.author_name}</p>
-                    <p style={{color:"white", marginLeft:"10px"}}>Birinchi marotaba nashr qilingan yili: {item.first_publish_year} </p>
+                    <p style={{color:"white"}}>Yozuvchisi: {item.author_name}</p>
+                    <p style={{color:"white"}}>Birinchi marotaba nashr qilingan yili: {item.first_publish_year} </p>
                 </p>
                 
                 {/* <img src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`} */}
@@ -88,4 +88,4 @@ function Book() {
     </div>
   )} 
 
-export default Book
+export default Library

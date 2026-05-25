@@ -4,7 +4,7 @@ import CurrencyConvertor from './convertor';
 import DavlatlarKetmaKet from './Davlatlar';
 import MovieSearch from './MovieSearch';
 import Translater from './Translater';
-import Book from './Book';
+import Library from './Library';
 
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
@@ -155,7 +155,7 @@ const Projects = () => {
       <button className='projectsbtn'> <Link className='projecttext' to='/davlatlar' style={{textDecorationLine:"none"}}>Davlatlar</Link> </button>
       <button className='projectsbtn'> <Link className='projecttext' to='/movie' style={{textDecorationLine:"none"}}>Filmlar izlash</Link> </button>
       <button className='projectsbtn'> <Link className='projecttext' to='/translater' style={{textDecorationLine:"none"}}>Tarjimon</Link> </button>
-      <button className='projectsbtn'> <Link className='projecttext' to='/book' style={{textDecorationLine:"none"}}>Kitoblarni izlash</Link> </button>
+      <button className='projectsbtn'> <Link className='projecttext' to='/library' style={{textDecorationLine:"none"}}>Kitoblarni Izlash</Link> </button>
 
     </div>
   )
@@ -186,7 +186,7 @@ function App() {
           <Route path="/davlatlar" element={<DavlatlarKetmaKet />} />
           <Route path="/movie" element={<MovieSearch />} />
           <Route path="/translater" element={<Translater />} />
-          <Route path="/book" element={<Book />} />
+          <Route path="/library" element={<Library />} />
 
         </Routes>
       </div>
