@@ -88,12 +88,12 @@ function MovieSearch() {
                         <img src={selectedMovie.Poster} alt={selectedMovie.Title} style={{width:"200px", borderRadius:"10px"}} />
 
                         <div>
-                            <h3>{selectedMovie.Title}</h3>
-                            <p><strong>Yil:</strong> {selectedMovie.Year} </p>
-                            <p><strong>Reyting:</strong> {selectedMovie.imdbRating} </p>
-                            <p><strong>Janr:</strong> {selectedMovie.Genre} </p>
-                            <p><strong>Aktyorlar:</strong> {selectedMovie.Actors} </p>
-                            <p><strong>Haqida:</strong> {selectedMovie.Plot} </p>
+                            <h3 style={{color:"black"}}>{selectedMovie.Title}</h3>
+                            <p style={{color:"black"}}><strong>Yil:</strong> {selectedMovie.Year} </p>
+                            <p style={{color:"black"}}><strong>Reyting:</strong> {selectedMovie.imdbRating} </p>
+                            <p style={{color:"black"}}><strong>Janr:</strong> {selectedMovie.Genre} </p>
+                            <p style={{color:"black"}}><strong>Aktyorlar:</strong> {selectedMovie.Actors} </p>
+                            <p style={{color:"black"}}><strong>Haqida:</strong> {selectedMovie.Plot} </p>
                         </div>
                     </div>
                 </div>

@@ -38,10 +38,10 @@ function CurrencyConvertor() {
         <div style={{padding:"30px", maxWidth:"500px", margin:"0", background:"#f4f7f6",
             borderRadius:"15px", boxShadow:"0 4px 8px rgba(0,0,0,0.1)", margin:"auto"
         }}>
-            <h2 style={{textAlign:"center"}}>Valyuta konvertori</h2>
+            <h2 style={{textAlign:"center", color:"rgb(51, 50, 46)"}}>Valyuta konvertori</h2>
 
             <div style={{marginBottom:"20px"}}>
-                <label>Miqdorini kiriting:</label>
+                <label style={{color:"rgb(51, 50, 46)"}}>Miqdorini kiriting:</label>
                 <input type="number"
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
@@ -50,7 +50,7 @@ function CurrencyConvertor() {
 
             <div style={{display:"flex", justifyContent:"space-between", gap:"10px"}}>
                 <div style={{ flex:1 }}>
-                    <label>Dan:</label>
+                    <label style={{color:"rgb(51, 50, 46)"}}>Dan:</label>
                     <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)} 
                     style={{width:"100%", padding:"10px", borderRadius:"5px"}}>
                         {rates.map(r => <option key={r.Ccy} value={r.Ccy}>{r.Ccy} - {r.CcyNm_UZ}</option>)}
@@ -58,7 +58,7 @@ function CurrencyConvertor() {
                 </div>
 
                 <div style={{ flex: 1}}>
-                    <label>Ga:</label>
+                    <label style={{color:"rgb(51, 50, 46)"}}>Ga:</label>
                     <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}
                         style={{width:"100%", padding:"10px", borderRadius:"5px"}}>
                             {rates.map(r => <option key={r.Ccy} value={r.Ccy}>{r.Ccy} - {r.CcyNm_UZ}</option>)}
@@ -67,7 +67,7 @@ function CurrencyConvertor() {
             </div>
 
             <div style={{marginTop:"30px", textAlign:"center", padding:"20px", background:"#fff", borderRadius:"10px"}}>
-                <h3 style={{margin:0}}>Natija:</h3>
+                <h3 style={{margin:0, color:"rgb(51, 50, 46)"}}>Natija:</h3>
                 <p style={{fontSize:"24px", fontWeight:"bold", color:"#2ecc71"}}>
                     {amount} {fromCurrency} = {result} {toCurrency}
                 </p>

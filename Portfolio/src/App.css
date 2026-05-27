@@ -1,3 +1,4 @@
+/* 
 .home{
   background-color: white;
   display: flex;
@@ -99,4 +100,137 @@ nav{
   margin: 10px;
   border-radius: 10px;
 }
+ 
+*/
 
+/* Umumiy sozlamalar */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a !important;
+    color: #f1f5f9 !important;
+    font-family: sans-serif;
+}
+
+/* Navigatsiya */
+nav {
+    background: rgb(56, 189, 248) !important;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 255, 0.5) !important;
+    border-radius: 10px;
+}
+
+.navtext {
+    color: white !important;
+    text-decoration: none !important; /* Tagi chizilishini yo'qotadi */
+    font-weight: bold;
+}
+
+/* --- HOME SAHIFASI --- */
+.home {
+    display: block !important;
+    background: #1e293b !important;
+    padding: 40px !important;
+    margin: 20px auto !important;
+    max-width: 1100px;
+    border-radius: 30px !important;
+}
+
+.all {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+
+.human {
+    width: 220px !important;
+    height: 220px !important;
+    border-radius: 50% !important;
+    object-fit: cover;
+}
+
+/* Ikonkalar va o'sha keraksiz to'rtburchaklarni yo'qotish */
+a {
+    text-decoration: none !important; /* Havolalar tagidagi chiziqni yo'qotadi */
+    outline: none !important;
+}
+
+.icon {
+    width: 45px !important;
+    height: 45px !important;
+    margin-right: 15px !important;
+    border-radius: 12px !important;
+    vertical-align: middle;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: transparent !important; /* Oq fonni yo'qotadi */
+}
+
+.icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+/* --- CONTACT SAHIFASI --- */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px !important;
+}
+
+.contact > p {
+    margin-top: 0 !important;
+    width: 90% !important;
+    max-width: 750px !important;
+    background-color: #1e293b !important;
+    color: #38bdf8 !important;
+    padding: 30px !important;
+    border-radius: 20px !important;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* --- PROJECTS --- */
+.projectsbtn {
+    background: #38bdf8 !important;
+    padding: 12px 25px !important;
+    margin: 10px !important;
+    border-radius: 12px !important;
+    border: none !important;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projectsbtn:hover {
+    transform: scale(1.05);
+    background: #0ea5e9 !important;
+}
+
+.projecttext {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+/* Animatsiya */
+.home, .contact, .about {
+    animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+ 
