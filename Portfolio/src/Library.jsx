@@ -67,7 +67,7 @@ function Library() {
 
 
 
-      <div>
+      <div style={{display:"grid", gridTemplateColumns:"repeat"}}>
         {result.map((item, index) => (
             <div style={{display:"flex", width:"auto", height:"400px"}}>
 
